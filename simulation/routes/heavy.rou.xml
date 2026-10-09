@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <vType id="car" vClass="passenger" length="5" accel="2.6" decel="4.5" maxSpeed="13.89" />
+    <vType id="truck" vClass="truck" length="9" accel="1.3" decel="4.0" maxSpeed="11.11" />
+    <vType id="motorcycle" vClass="motorcycle" length="2.2" accel="3.0" decel="5.0" maxSpeed="13.89" />
+    <route id="north_south" edges="north_in south_out" />
+    <route id="south_north" edges="south_in north_out" />
+    <route id="east_west" edges="east_in west_out" />
+    <route id="west_east" edges="west_in east_out" />
+    <!-- Sustained peak demand: about 3 vehicles/second across all approaches. -->
+    <flow id="north_cars" type="car" route="north_south" begin="0" end="400" period="1.5" />
+    <flow id="east_cars" type="car" route="east_west" begin="0" end="400" period="1.5" />
+    <flow id="west_cars" type="car" route="west_east" begin="0" end="400" period="1.5" />
+    <flow id="north_trucks" type="truck" route="north_south" begin="1" end="400" period="12" />
+    <flow id="south_cars" type="car" route="south_north" begin="1" end="400" period="1.5" />
+    <flow id="east_bikes" type="motorcycle" route="east_west" begin="2" end="400" period="8" />
+    <flow id="west_bikes" type="motorcycle" route="west_east" begin="3" end="400" period="8" />
+    <flow id="south_trucks" type="truck" route="south_north" begin="5" end="400" period="12" />
+</routes>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <vType id="car" vClass="passenger" length="5" accel="2.6" decel="4.5" maxSpeed="13.89" />
+    <vType id="truck" vClass="truck" length="9" accel="1.3" decel="4.0" maxSpeed="11.11" />
+    <vType id="motorcycle" vClass="motorcycle" length="2.2" accel="3.0" decel="5.0" maxSpeed="13.89" />
+    <route id="north_south" edges="north_in south_out" />
+    <route id="south_north" edges="south_in north_out" />
+    <route id="east_west" edges="east_in west_out" />
+    <route id="west_east" edges="west_in east_out" />
+    <vehicle id="n_car_0" type="car" route="north_south" depart="0" />
+    <vehicle id="w_truck_0" type="truck" route="west_east" depart="2" />
+    <vehicle id="e_car_0" type="car" route="east_west" depart="3" />
+    <vehicle id="s_car_0" type="car" route="south_north" depart="5" />
+    <vehicle id="n_truck_1" type="truck" route="north_south" depart="8" />
+    <vehicle id="e_bike_1" type="motorcycle" route="east_west" depart="11" />
+</routes>
